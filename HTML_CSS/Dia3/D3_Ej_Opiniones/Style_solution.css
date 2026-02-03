@@ -1,0 +1,125 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* hemos puesto todo el contenido en el medio de la web */
+    height: 100vh;
+    margin: 0;
+
+    /* llamo al centro de salud, es decir los contenidos como tal, lal caja grande */
+    & .centro-salud{
+        background-color: azure;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        /* para hacer que no esté pegado a la parte de arriba del cuadro */
+
+        box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.75);
+        /* al final le metemos el box shadow de la pagina web y ahora le metemos borde redondeado */
+        border-radius: 7px;
+        
+        & .contenedor-imagen{
+            margin: 10px;
+        }
+        
+        & .contenedor-texto{
+            display: flex;
+            flex-direction: column;
+
+            & h1{
+                margin: 5px;
+                font-size: 20px;
+                margin-left: 0px;
+                /* el margin ese porque no estaban todos alineados */
+            }
+
+            & h2{
+                margin: 3px;
+                margin-left: 0px;
+                font-size: 15px;
+                color: rgb(60, 114, 229);
+            }
+
+            & .contenedor-botones{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                & button{
+                    /* estilamos los dos botoneds iguales y luego los detalles de color
+                    se los damos cuando estén hechos */
+                    padding: 8px;
+                    border-radius: 15px;
+                    /* estilamos aquí porque si no estaríamos estilando la caja que los une,
+                    no las cajitas de los botones */
+                    font-size: 12px;
+                    background-color: rgb(83, 203, 255);
+                    border-width: 1px;
+                    border-color: rgb(60, 114, 229);
+                    color: white;
+                    cursor: pointer;
+                }
+
+                & #reservar-cita{
+                    background-color: rgb(252, 255, 255);
+                    border-color: rgb(60, 114, 229);
+                    color: rgb(83, 203, 255);
+                }
+                /* ponemos reservar-cita a la misma altura que botones porque 
+                básicamente es un botón como botones */
+            }
+        }
+
+        & .contenedor-opiniones{
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            /* le metemos el margen que le metimos a la imagen, para que 
+            quede con espacio también, podrías poner un padding también */
+            align-items: center;
+
+            & .texto-opiniones{
+                color: rgb(60, 114, 229);
+                
+                & a{
+                    text-decoration: none;
+                    color: rgb(60, 114, 229);
+                    }
+
+                & p{
+                    margin: 3px;
+                    margin-left: 0px;
+                }
+                                
+            }
+
+            & #nota{
+                margin: 5px;
+                padding: 15px;
+                background-color: rgb(83, 203, 255);
+                border-radius: 15px;
+                border-color: rgb(60, 114, 229);
+                color: white;
+                transition: 0.5s;
+            }
+            /* le vamos a poner una animación para que se mueva 
+            y cambie de color al hacer hover */
+            & #nota:hover{
+                border-color: rgb(28, 1, 180);
+                border-style: solid;
+                border-width: 5px;
+            /* quitamos el borde de arriba y la izquierda porque queremos 
+            que se mueva hacia esa dirección, así que la sombra se queda ahí*/
+                border-top: 0px;
+                border-left: 0px;
+            /* ahora le metemos animaciones con transform */
+                transform: translateX(-3px) translateY(-3px);
+            /* y el retardo del movimiento */
+                transition: 0.5s;
+            }
+            }
+        }
+    }  

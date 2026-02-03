@@ -1,0 +1,63 @@
+body{
+    display: flex;
+    flex-direction: row;
+    /* para que era? */
+    height: 100%;
+    margin: 0; 
+    /* margin es todos los margenes, alguno específico es margin bottom o lo que sea */
+
+    & .menu-lateral{
+        background-color: rgb(154, 88, 223);
+        width: 30%;
+        /*  */
+
+        display: flex;
+        flex-direction: column;
+        /*  */
+
+        & a{
+            color: white;
+            text-decoration: none;
+            /* para quitar el formato específico de los enlaces */
+            padding: 15px;
+            /* para poder hacer click en todo el recorrido del elemento, y no solo la palabra */
+            margin: 9px;
+            /*  */
+            font-size: 30px;
+        }
+        /* el hover v a al amisma altura que el elemto a porque quiero que ssea ahí */
+        & a:hover{
+           background-color: rgb(103, 0, 200); 
+        }
+    }
+}
+
+
+
+
+/* lo qeu yo había hecho
+ .menu-lateral{
+    background-color: rgb(76, 178, 76);
+    color: white;
+    position: left;
+    position: fixed;
+    height: 100%;
+    width: fit-content;
+}
+
+.nav :hover{
+    background-color: rgb(20, 118, 20);
+}
+
+.Online{
+    background-color: rgb(11, 151, 11);
+    width: fit-content;
+    }
+
+.contenido{
+    position: fixed;
+     position: right;
+    width: 50%;
+    justify-content: right;
+}
+    */
