@@ -1,26 +1,112 @@
 <!-- Nombre, descripción de trabajo, aptitudes,... -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum_MPMB</title>
     <link rel="stylesheet" href="./curriculumSTYLE.css">
- </head>
- <body>
-    <div>
-        <h1> María Perdomo Martínez-Berná </h1>
-        Analista gis y Ambientóloga
-        <!-- Resumen de mí misma -->
-         <img src="" alt="">
+
+    <!-- Links para la fuente del texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="pantalla1">
+
+        <div class="soy-maria">
+            <h1 id="mi-nombre"> María Perdomo Martínez-Berná </h1>
+            <h2 id="carrera">Ambientóloga y Analista GIS</h2>
+            <p id="resumen-de-mi">Resumen de mí misma</p>
+        </div>
+
+        <div Class="mi-foto">
+            <img id="yo" src="./Imágenes/Foto María Perdomo Martínez-Berná- cuadrado.jpg">
+        </div>
 
     </div>
-    
-    <div>
-        <h3>Experiencia</h3>
+
+    <div class="pantalla2">
+
+        <div id="titulo2">
+            <h2>Datos personales</h2>
+        </div>
+
+        <div class="texto-datos-personales">
+            <img id="foto-tlf" loading="lazy" width="40" height="40"
+                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                src="./Imágenes/Iconos/teléfono-B&W.png">
+
+            <p> 644197415</p>
+
+            <p><img loading="lazy" width="50" height="50"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-mail" src="./Imágenes/Iconos/mail-B&W.png">
+                meerpmb@gmail.com</p>
+
+            <a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">
+                <img loading="lazy" width="50" height="50"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-linkedin" src="./Imágenes/Iconos/linkedin-B&W.png">
+                Linkedin</a>
+
+            <p><img loading="lazy" width="50" height="50"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-coche" src="./Imágenes/Iconos/coche-B&W.png">
+                Permiso B de conducir</p>
+
+            <p><img loading="lazy" width="50" height="50"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-pasaport" src="./Imágenes/Iconos/pasaporte-B&W.png">
+                Doble Nacionalidad Española-Australiana</p>
+
+        </div>
+
+    </div>
+
+    <div class="pantalla3-herramientas">
+
+        <h2>Hard Skills</h2>
+        <p>SPSS</p>
+        <p>ArcGIS Pro</p>
+        <p>Microsoft Office</p>
+        <p>Word</p>
+        <p>Excel</p>
+        <p>Poweropint</p>
+        <p>Inteligencia Artificial</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>Python</p>
+        <p>JavaScript</p>
+
+        <h2>Idiomas</h2>
         <ul>
+            <li>Español - Nativo</li>
+            <li>Inglés - Alto (C1 CAE)</li>
+        </ul>
+
+    </div>
+
+    <div class="pantalla4-experiencia">
+
+        <h2>Experiencia</h2>
+
+        <ul>
+            <img id="foto-tlf" loading="lazy" width="180" height="90"
+                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                src="./Imágenes/experiencia/VEOLIA.png">
             <li>Prácticas en <strong>Veolia Water Technologies</strong> (2024-2025)</li>
+            
+            <img id="foto-tlf" loading="lazy" width="110" height="110"
+                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
             <li>Prácticas en <Strong>Stockholm University</Strong> (2022-2023)</li>
+            
             <li>Asociación estudiantil <strong>UAM Entiende</strong></li>
             <ul>
                 <li>Presidnecia (2020-2022) (2023-2024)</li>
@@ -29,43 +115,34 @@
             <li>Delegada de clase en el instituto (2013-2014) (2017-2018)</li>
             <li>Capitana de equipo de fútbol: <strong>Unión Deportiva Arollo Fresno</strong>(2026-2018)</li>
         </ul>
+
     </div>
 
-    <div> 
-        <h3>Formación Adacémica</h3>
+    <div class="pantalla4-2-formacion">
+
+        <h2>Formación Adacémica</h2>
+
         <ul>
             <li><strong>Universidad Autónoma de Madrid</strong>(2019-2025)</li>
             <ul>
-                <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y desarrollo sosteniblel</li>
+                <img id="foto-tlf" loading="lazy" width="180" height="90"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    src="./Imágenes/Formacion/logo_UAM.png">
+                <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y desarrollo sostenible
+                </li>
                 <li>Curso de competencias profesionales: Innovación y Creatividad</li>
-                </ul>
-            <li><strong>Universidad de Estocolmo</strong>(2022-0223) 
+            </ul>
+           
+            <img id="foto-tlf" loading="lazy" width="110" height="110"
+                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
+            <li><strong>Universidad de Estocolmo</strong>(2022-0223)
                 Programa de movilidad Beca Erasmus CIVIS</li>
         </ul>
     </div>
-    <div>
-        <h3>Hard Skills</h3>
-        <p>SPSS</p>
-        <p>ArcGIS</p>
-        <p>Microsoft Office</p>
-        <p></p>
 
-    </div>
-
-
-    <div>
-        <h3>Datos personales</h3>  
-        <ul>
-            <li>Icono de Teléfono: 644197415</li>
-            <li>Icono mail: meerpmb@gmail.com</li>
-            <li><a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">Linkedin</a></li>
-            <li>Icono coche: Permiso B de conducir</li>
-            <li>Doble Nacionalidad Española-Australiana</li>
-        </ul>      
-    </div>
-
-    <div>
-        <h3>Habilidades</h3>
+    <div class="pantalla5">
+        <h2>Habilidades</h2>
         <ul>
             <li>Trabajo en equipo</li>
             <li>Gestión del tiempo</li>
@@ -76,28 +153,20 @@
             <li>Gestión de presupuestos</li>
             <li>Aprendizaje autodidacta</li>
         </ul>
-    </div>
 
-    <div>
-        <h3>Idiomas</h3>
-        <ul>
-        <li>Español - Nativo</li>
-        <li>Inglés - Alto (C1 CAE)</li>
-        </ul>
-    </div>
-
-    <div>
-        <h3>Intereses</h3>
+        <h2>Intereses</h2>
         <ul>
             <li>Música: nivel medio de guitarra</li>
             <li>Deportes</li>
-            <ul><li>Rugby</li>
+            <ul>
+                <li>Rugby</li>
                 <li>Snowboard</li>
                 <li>Fútbol</li>
             </ul>
-            <li>Mitología y culturas antiguas</li>            
+            <li>Mitología y culturas antiguas</li>
         </ul>
     </div>
 
- </body>
- </html>
+</body>
+
+</html>

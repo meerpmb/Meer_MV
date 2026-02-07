@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(255, 222, 149);
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /* fin del body */
+}
+
+.pantalla1 {
+    /* nombre, carrera, descripción y foto */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    & .soy-maria {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+    }
+
+    & .mi-foto {
+
+        justify-content: right;
+
+        & #yo {
+            width: 150px;
+            border: none;
+            border-radius: 50%;
+            padding: 25px;
+        }
+    }
+}
+
+.pantalla2 {
+    height: 100vh;
+    scroll-snap-align: start;
+
+    & #titulo2 {
+        text-align: center;
+        padding: 40px;
+    }
+
+    & #texto-datos-personales {
+
+
+        & #foto-tlf {
+            width: 5px;
+            height: 5px;
+        }
+
+        & #icono-datos-personales {
+            width: 300px;
+            color: blue;
+            /* esto no funciona */
+        }
+    }
+}
+
+.pantalla3-herramientas {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.pantalla4-experiencia {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.pantalla4-2-formacion {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.pantalla5 {
+    height: 100vh;
+    scroll-snap-align: start;
+}
