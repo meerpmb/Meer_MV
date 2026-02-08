@@ -1,11 +1,15 @@
-body {
-    background-color: rgb(255, 222, 149);
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    margin: 0;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    /* fin del body */
+ body { 
+    font-family: 'Roboto Slab', serif; 
+    font-weight: 400; margin: 0; scroll-behavior: smooth;
+     scroll-snap-type: y mandatory; 
+     color: #e0c48c;
+     overflow-y: scroll;
+     scroll-snap-type: y mandatory;
+     /* fin del body */
+    }
+
+.diapos {
+
 }
 
 .pantalla1 {
@@ -14,31 +18,50 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    /* Rellena toda la pantalla */
     height: 100vh;
-    scroll-snap-align: start;
+     /* Imagen de fondo */
+    background-color: #8B7851;
+    background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position-x: center;
+    background-size: 100vh;
 
     & .soy-maria {
         display: flex;
         flex-direction: column;
-        margin-right: 40px;
+        align-content: center;
+        justify-content: center;
+        padding-inline: 5%;
+        border: #a36d02;
     }
 
     & .mi-foto {
-
-        justify-content: right;
-
+        position: relative;
+        display: inline-block;
+              
         & #yo {
+            display: block;
             width: 150px;
             border: none;
-            border-radius: 50%;
-            padding: 25px;
+            height: auto;
         }
+        
+         & #yo-marco{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* intento de meter la foto en el marco, un poco fallido, volveremos */
+
     }
 }
 
 .pantalla2 {
     height: 100vh;
-    scroll-snap-align: start;
+    background-color: #8C8051;
 
     & #titulo2 {
         text-align: center;
@@ -63,20 +86,24 @@ body {
 
 .pantalla3-herramientas {
     height: 100vh;
-    scroll-snap-align: start;
+    background-color: #8C7051;
+    
 }
 
 .pantalla4-experiencia {
     height: 100vh;
-    scroll-snap-align: start;
+    background-color: #8C6651;
+    
 }
 
 .pantalla4-2-formacion {
     height: 100vh;
-    scroll-snap-align: start;
+    background-color: #8C6651;
+    
 }
 
 .pantalla5 {
     height: 100vh;
-    scroll-snap-align: start;
-}
+    background-color: #8C7051;
+
+    }

@@ -1,3 +1,49 @@
+*{
+	margin: o;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.slides	{
+		width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	color: white;
+	scroll-snap-align: start;
+	background-color: aquamarine;
+	background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
+	background-repeat: no-repeat, no-repeat, no-repeat;
+  	background-position:
+    	center;
+	background-size: 100vh;
+}
+
+.slides img{
+	width: 100%;
+}
+
+.slides h2{
+	font-size: 70px;
+	font-weight: 600;
+	max-width: 650px;
+}
+
+#fondo1{
+	
+}
+
+/* 
 * {
 	padding: 0;
 	margin: 0;
@@ -93,7 +139,7 @@ p {
 	background-size: cover;
 	transition: 0.3s ease-in-out;
 	/* border: 1px solid green; */
-}
+/* }
 
 .inset {
 	max-width: 50%;
@@ -159,12 +205,16 @@ p {
 }
 
 /* Animations and timing delays */
+
+/* 
 .animate {
 	animation-duration: 0.7s;
 	animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
 	animation-fill-mode: backwards;
 }
 /* Pop In */
+
+/* 
 .pop {
 	animation-name: pop;
 }
@@ -180,6 +230,8 @@ p {
 }
 
 /* Slide In */
+
+/* /
 .slide {
 	animation-name: slide;
 }
@@ -195,6 +247,8 @@ p {
 }
 
 /* Slide Left */
+
+/* 
 .slide-left {
 	animation-name: slide-left;
 }
@@ -247,3 +301,4 @@ p {
 .delay-8 {
 	animation-delay: 2.4s;
 }
+ */
