@@ -32,137 +32,296 @@
 
     </div>
 
+    <!-- === PANTALLA 2 === -->
+
     <div class="pantalla2">
 
         <div class="subtitulo" id="titulo2">
             <h2>Datos personales</h2>
         </div>
 
-        <div class="texto-datos-personales">
+        <div class="datos-personales">
+            <!-- CAJA GRANDE -->
+            <div class="subcaja-dp" id="contacto">
+                <!-- subcaja 1  (3elem)-->
+                <div class="d-p" id="telefono">
+                    <img id="foto-tlf" loading="lazy" width="40" height="40"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        src="./Imágenes/Iconos/teléfono-B&W.png">
+                    <div class="txt">
+                        <p> 644197415</p>
+                    </div>
+                </div>
 
-            <div class="telefono">
-                <img id="foto-tlf" loading="lazy" width="40" height="40"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    src="./Imágenes/Iconos/teléfono-B&W.png">
-                <p> 644197415</p>
-            </div>
+                <div class="d-p" id="mail">
+                    <img loading="lazy" width="50" height="50"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-mail" src="./Imágenes/Iconos/mail-B&W.png">
+                    <div class="txt">
+                        <p>meerpmb@gmail.com</p>
+                    </div>
+                </div>
 
-            <div class="mail">
-                <img loading="lazy" width="50" height="50"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-mail" src="./Imágenes/Iconos/mail-B&W.png">
-                <p>meerpmb@gmail.com</p>
-            </div>
-
-            <div class="linkedin">
-                <a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">
+                <div class="d-p" id="linkedin">
                     <img loading="lazy" width="50" height="50"
                         sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
                         class="icono-datos-personales" id="foto-linkedin" src="./Imágenes/Iconos/linkedin-B&W.png">
-                    Linkedin
-                </a>
-            </div>
+                    <div class="txt">
+                        <a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">
+                            Linkedin
+                        </a>
+                    </div>
+                </div>
 
-            <div class="carne">
-                <img loading="lazy" width="50" height="50"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-coche" src="./Imágenes/Iconos/coche-B&W.png">
-                <p>Permiso B de conducir</p>
             </div>
+            <!-- subcaja 2 -->
+            <div class="subcaja-dp" id="carneNacionalidad">
+                <div class="c-n" id="carnet">
+                    <img loading="lazy" width="50" height="50"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-coche" src="./Imágenes/Iconos/coche-B&W.png">
+                    <div class="txt">
+                        <p>Permiso B de conducir</p>
+                    </div>
+                </div>
 
-            <div class="nacionalidad">
-                <img loading="lazy" width="50" height="50"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-pasaport" src="./Imágenes/Iconos/pasaporte-B&W.png">
-                <p>Doble Nacionalidad Española-Australiana</p>
+                <div class="c-n" id="nacionalidad">
+                    <img loading="lazy" width="50" height="50"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-pasaport" src="./Imágenes/Iconos/pasaporte-B&W.png">
+                    <div class="txt">
+                        <p>Doble Nacionalidad Española-Australiana</p>
+                    </div>
+                </div>
             </div>
+            <!-- susbcaja 3 -->
+            <div class="subcaja-dp" id="idiomas">
+                <div class="d-p espanol">
+                    <img loading="lazy" width="65" height="65"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-espanol" src="./Imágenes/Iconos/español.png">
 
-            <div class="espanol">
-                <img loading="lazy" width="65" height="65"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-espanol" src="./Imágenes/Iconos/español.png">
-                <p>Español - Nivel Nativo</p>
-            </div>
+                    <div class="txt">
+                        <p>Español - Nivel Nativo</p>
+                    </div>
+                </div>
 
-            <div class="ingles">
-                <img loading="lazy" width="65" height="65"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-ingles" src="./Imágenes/Iconos/inglés.png">
-                <p>Inglés - Alto (C1 CAE)</p>
+                <div class="d-p ingles">
+
+                    <img loading="lazy" width="65" height="65"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-ingles" src="./Imágenes/Iconos/inglés.png">
+                    <div class="txt">
+                        <p>Inglés - Alto (C1 CAE)</p>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
     </div>
-
+    <!-- === PANTALLA 3 === -->
     <div class="pantalla3-herramientas">
 
         <h2 class="subtitulo">Hard Skills</h2>
-        <p>SPSS</p>
-        <p>ArcGIS Pro</p>
-        <p>Microsoft Office</p>
-        <p>Word</p>
-        <p>Excel</p>
-        <p>Poweropint</p>
-        <p>Inteligencia Artificial</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Python</p>
-        <p>JavaScript</p>
+
+        <div class="hard-skills">
+            <!-- caja grande -->
+            <div class="computer-skills">
+                <!-- subcaja seccion 1 -->
+                <div class="c-s-1">
+
+                    <div class="c-s-1-1" id="SPSS">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-SPSS" src="./..........................">
+                        <div class="txt">
+                            <p>SPSS</p>
+                        </div>
+
+                    </div>
+
+                    <div class="c-s-1-1" id="Pro">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-Pro" src="./..........................">
+                        <div class="txt">
+                            <p>ArcGIS Pro</p>
+                        </div>
+
+                    </div>
+
+                    <div class="c-s-1-1" id="Python">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-Python" src="./..........................">
+                        <div class="txt">
+                            <p>Python</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- subcaja seccion 2 -->
+                <div class="c-s-2">
+
+                    <div class="c-s-2-1" id="HTML">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-HTML" src="./..........................">
+                        <div class="txt">
+                            <p>HTML</p>
+                        </div>
+
+                    </div>
+
+                     <div class="c-s-2-1" id="CSS">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-CSS" src="./..........................">
+                        <div class="txt">
+                            <p>CSS</p>
+                        </div>
+
+                    </div>
+
+                     <div class="c-s-2-1" id="JavaScript">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-JavaScript" src="./..........................">
+                        <div class="txt">
+                            <p>JavaScript</p>
+                        </div>
+
+                    </div>
+
+                    </div>
+            </div>
+            <!-- subcaja seccion 3 -->
+            <div class="office">
+                
+                <h3>Microsoft Office</h3>
+
+                 <div class="o-1" id="Word">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-Word" src="./..........................">
+                        <div class="txt">
+                            <p>Word</p>
+                        </div>
+
+                    </div>
+
+                 <div class="o-1" id="Excel">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-Excel" src="./..........................">
+                        <div class="txt">
+                            <p>Excel</p>
+                        </div>
+
+                    </div>
+                
+                 <div class="o-1" id="Poweropint">
+                        <img loading="lazy" width="50" height="50"
+                            sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                            class="icono-hard-skills" id="foto-Poweropint" src="./..........................">
+                        <div class="txt">
+                            <p>Poweropint</p>
+                        </div>
+
+                    </div>
+                
+            </div>
+
+        </div>
+
 
     </div>
 
-    <div class="pantalla4">
+    <!-- === PANTALLA 4 === -->
+
+    <div class="pantalla4-experiencia">
 
         <div id="experiencia">
-
+            <!-- caja izquierda expericencia -->
             <h2 class="subtitulo">Experiencia</h2>
 
-            <img id="foto-veolia" loading="lazy" width="180" height="90"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    src="./Imágenes/experiencia/VEOLIA.png">
-            <p>Prácticas en <strong>Veolia Water Technologies</strong> (2024-2025)</p>
+            <div class="experiencia">
+                <div class="veolia">
+                    <img id="foto-veolia" loading="lazy" width="180" height="90"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        src="./Imágenes/experiencia/VEOLIA.png">
+                    <p>Prácticas en <strong>Veolia Water Technologies</strong> (2024-2025)</p>
+                </div>
 
-            <img id="foto-su" loading="lazy" width="110" height="110"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
-            <p>Prácticas en <Strong>Stockholm University</Strong> (2022-2023)</p>
+                <div class="practicas-su">
+                    <img id="foto-su" loading="lazy" width="110" height="110"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
+                    <p>Prácticas en <Strong>Stockholm University</Strong> (2022-2023)</p>
+                </div>
 
-            <p>Asociación estudiantil <strong>UAM Entiende</strong></p>
-            
-               <ul>
-                    <li>Presidnecia (2020-2022) (2023-2024)</li>
-                    <li>Secretaría (2019-2020)</li>
-                </ul>
-            
-                <p>Delegada de clase en el instituto</p>
-                <p>Capitana de equipo de fútbol: <strong>Unión Deportiva Arollo Fresno</strong>(2026-2018)</p>
+                <div class="uamen">
+                    <p>Asociación estudiantil <strong>UAM Entiende</strong></p>
+
+                    <ul>
+                        <li>Presidnecia (2020-2022) (2023-2024)</li>
+                        <li>Secretaría (2019-2020)</li>
+                    </ul>
+                </div>
+
+                <div class="delegada">
+                    <p>Delegada de clase en el instituto</p>
+                </div>
+
+                <div class="capitana">
+                    <p>Capitana de equipo de fútbol: <strong>Unión Deportiva Arollo Fresno</strong>(2026-2018)
+                    </p>
+                </div>
+            </div>
 
         </div>
 
         <div id="formacion">
 
+            <!-- caja derecha formación -->
+
             <h2 class="subtitulo">Formación Adacémica</h2>
 
-            <img id="foto-uam" loading="lazy" width="180" height="90"
+            <div class="formacion">
+                <!-- subcaja formacion -->
+                <div class="uam">
+                    <img id="foto-uam" loading="lazy" width="180" height="90"
                         sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
                         src="./Imágenes/Formacion/logo_UAM.png">
-            <p><strong>Universidad Autónoma de Madrid</strong>(2019-2025)</p>
-                <ul>
-                    <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y desarrollo
-                        sostenible
-                    </li>
-                    <li>Curso de competencias profesionales: Innovación y Creatividad</li>
-                </ul>
+                    <p><strong>Universidad Autónoma de Madrid</strong>(2019-2025)</p>
+                    <ul>
+                        <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y
+                            desarrollo
+                            sostenible
+                        </li>
+                        <li>Curso de competencias profesionales: Innovación y Creatividad</li>
+                    </ul>
+                </div>
 
-            <img id="foto-su" loading="lazy" width="110" height="110"
-                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
-            <p><strong>Universidad de Estocolmo</strong>(2022-0223)
-                    Programa de movilidad Beca Erasmus CIVIS</p>
+                <div class="erasmus-su">
+                    <img id="foto-su" loading="lazy" width="110" height="110"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
+                    <p><strong>Universidad de Estocolmo</strong>(2022-0223)
+                        Programa de movilidad Beca Erasmus CIVIS</p>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
+
+    <!-- === PANTALLA 5 === -->
 
     <div class="pantalla5">
         <h2 class="subtitulo">Habilidades</h2>

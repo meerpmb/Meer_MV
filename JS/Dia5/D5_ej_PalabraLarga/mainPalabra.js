@@ -18,5 +18,6 @@ for (const apodo of Palabras){
         // por ahora al ser la única es la más larga
     } 
 
-
 }
+
+console.log(palabraMasLarga)
