@@ -26,7 +26,7 @@
         </div>
 
         <div Class="mi-foto">
-            <img id="marco-yo" src="./Imágenes/Background/marco-hojas-cuadrado.png">
+            <!-- img id="marco-yo" src="./Imágenes/Background/marco-hojas-cuadrado.png"> -->
             <img id="yo" src="./Imágenes/Foto María Perdomo Martínez-Berná- cuadrado.jpg">
         </div>
 
@@ -34,37 +34,62 @@
 
     <div class="pantalla2">
 
-        <div id="titulo2">
+        <div class="subtitulo" id="titulo2">
             <h2>Datos personales</h2>
         </div>
 
         <div class="texto-datos-personales">
-            <img id="foto-tlf" loading="lazy" width="40" height="40"
-                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                src="./Imágenes/Iconos/teléfono-B&W.png">
 
-            <p> 644197415</p>
-
-            <p><img loading="lazy" width="50" height="50"
+            <div class="telefono">
+                <img id="foto-tlf" loading="lazy" width="40" height="40"
                     sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-mail" src="./Imágenes/Iconos/mail-B&W.png">
-                meerpmb@gmail.com</p>
+                    src="./Imágenes/Iconos/teléfono-B&W.png">
+                <p> 644197415</p>
+            </div>
 
-            <a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">
+            <div class="mail">
                 <img loading="lazy" width="50" height="50"
                     sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    class="icono-datos-personales" id="foto-linkedin" src="./Imágenes/Iconos/linkedin-B&W.png">
-                Linkedin</a>
+                    class="icono-datos-personales" id="foto-mail" src="./Imágenes/Iconos/mail-B&W.png">
+                <p>meerpmb@gmail.com</p>
+            </div>
 
-            <p><img loading="lazy" width="50" height="50"
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/in/mar%C3%ADa-perdomo-mb">
+                    <img loading="lazy" width="50" height="50"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        class="icono-datos-personales" id="foto-linkedin" src="./Imágenes/Iconos/linkedin-B&W.png">
+                    Linkedin
+                </a>
+            </div>
+
+            <div class="carne">
+                <img loading="lazy" width="50" height="50"
                     sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
                     class="icono-datos-personales" id="foto-coche" src="./Imágenes/Iconos/coche-B&W.png">
-                Permiso B de conducir</p>
+                <p>Permiso B de conducir</p>
+            </div>
 
-            <p><img loading="lazy" width="50" height="50"
+            <div class="nacionalidad">
+                <img loading="lazy" width="50" height="50"
                     sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
                     class="icono-datos-personales" id="foto-pasaport" src="./Imágenes/Iconos/pasaporte-B&W.png">
-                Doble Nacionalidad Española-Australiana</p>
+                <p>Doble Nacionalidad Española-Australiana</p>
+            </div>
+
+            <div class="espanol">
+                <img loading="lazy" width="65" height="65"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-espanol" src="./Imágenes/Iconos/español.png">
+                <p>Español - Nivel Nativo</p>
+            </div>
+
+            <div class="ingles">
+                <img loading="lazy" width="65" height="65"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    class="icono-datos-personales" id="foto-ingles" src="./Imágenes/Iconos/inglés.png">
+                <p>Inglés - Alto (C1 CAE)</p>
+            </div>
 
         </div>
 
@@ -72,7 +97,7 @@
 
     <div class="pantalla3-herramientas">
 
-        <h2>Hard Skills</h2>
+        <h2 class="subtitulo">Hard Skills</h2>
         <p>SPSS</p>
         <p>ArcGIS Pro</p>
         <p>Microsoft Office</p>
@@ -85,65 +110,62 @@
         <p>Python</p>
         <p>JavaScript</p>
 
-        <h2>Idiomas</h2>
-        <ul>
-            <li>Español - Nativo</li>
-            <li>Inglés - Alto (C1 CAE)</li>
-        </ul>
-
     </div>
 
-    <div class="pantalla4-experiencia">
+    <div class="pantalla4">
 
-        <h2>Experiencia</h2>
+        <div id="experiencia">
 
-        <ul>
-            <img id="foto-tlf" loading="lazy" width="180" height="90"
-                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                src="./Imágenes/experiencia/VEOLIA.png">
-            <li>Prácticas en <strong>Veolia Water Technologies</strong> (2024-2025)</li>
-            
-            <img id="foto-tlf" loading="lazy" width="110" height="110"
-                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
-            <li>Prácticas en <Strong>Stockholm University</Strong> (2022-2023)</li>
-            
-            <li>Asociación estudiantil <strong>UAM Entiende</strong></li>
-            <ul>
-                <li>Presidnecia (2020-2022) (2023-2024)</li>
-                <li>Secretaría (2019-2020)</li>
-            </ul>
-            <li>Delegada de clase en el instituto (2013-2014) (2017-2018)</li>
-            <li>Capitana de equipo de fútbol: <strong>Unión Deportiva Arollo Fresno</strong>(2026-2018)</li>
-        </ul>
+            <h2 class="subtitulo">Experiencia</h2>
 
-    </div>
-
-    <div class="pantalla4-2-formacion">
-
-        <h2>Formación Adacémica</h2>
-
-        <ul>
-            <li><strong>Universidad Autónoma de Madrid</strong>(2019-2025)</li>
-            <ul>
-                <img id="foto-tlf" loading="lazy" width="180" height="90"
+            <img id="foto-veolia" loading="lazy" width="180" height="90"
                     sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                    src="./Imágenes/Formacion/logo_UAM.png">
-                <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y desarrollo sostenible
-                </li>
-                <li>Curso de competencias profesionales: Innovación y Creatividad</li>
-            </ul>
-           
-            <img id="foto-tlf" loading="lazy" width="110" height="110"
-                sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
-                src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
-            <li><strong>Universidad de Estocolmo</strong>(2022-0223)
-                Programa de movilidad Beca Erasmus CIVIS</li>
-        </ul>
+                    src="./Imágenes/experiencia/VEOLIA.png">
+            <p>Prácticas en <strong>Veolia Water Technologies</strong> (2024-2025)</p>
+
+            <img id="foto-su" loading="lazy" width="110" height="110"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
+            <p>Prácticas en <Strong>Stockholm University</Strong> (2022-2023)</p>
+
+            <p>Asociación estudiantil <strong>UAM Entiende</strong></p>
+            
+               <ul>
+                    <li>Presidnecia (2020-2022) (2023-2024)</li>
+                    <li>Secretaría (2019-2020)</li>
+                </ul>
+            
+                <p>Delegada de clase en el instituto</p>
+                <p>Capitana de equipo de fútbol: <strong>Unión Deportiva Arollo Fresno</strong>(2026-2018)</p>
+
+        </div>
+
+        <div id="formacion">
+
+            <h2 class="subtitulo">Formación Adacémica</h2>
+
+            <img id="foto-uam" loading="lazy" width="180" height="90"
+                        sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                        src="./Imágenes/Formacion/logo_UAM.png">
+            <p><strong>Universidad Autónoma de Madrid</strong>(2019-2025)</p>
+                <ul>
+                    <li>Grado en <strong>Ciencias Ambientales</strong>: itinerario Gestión ambiental y desarrollo
+                        sostenible
+                    </li>
+                    <li>Curso de competencias profesionales: Innovación y Creatividad</li>
+                </ul>
+
+            <img id="foto-su" loading="lazy" width="110" height="110"
+                    sizes="auto, (max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)"
+                    src="./Imágenes/Formacion/Stockholms_Universitet_logo.png">
+            <p><strong>Universidad de Estocolmo</strong>(2022-0223)
+                    Programa de movilidad Beca Erasmus CIVIS</p>
+        </div>
+
     </div>
 
     <div class="pantalla5">
-        <h2>Habilidades</h2>
+        <h2 class="subtitulo">Habilidades</h2>
         <ul>
             <li>Trabajo en equipo</li>
             <li>Gestión del tiempo</li>
