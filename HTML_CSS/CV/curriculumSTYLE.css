@@ -1,62 +1,62 @@
- body {
-     font-family: 'Roboto Slab', serif;
-     font-weight: 400;
-     margin: 0;
-     scroll-behavior: smooth;
-     scroll-snap-type: y mandatory;
-     color: #e0c48c;
-     overflow-y: scroll;
-     scroll-snap-type: y mandatory;
-     /* fin del body */
- }
+body {
+  background-color: #8c7051;
+  margin: 0;
+  width: 100vw;
+  justify-content: center;
 
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  color: #e0c48c;
 
- .pantalla1 {
-     /* nombre, carrera, descripción y foto */
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
-     /* Rellena toda la pantalla */
-     height: 100vh;
-     /* Imagen de fondo */
-     background-color: #8B7851;
-     background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
-     background-repeat: no-repeat, no-repeat, no-repeat;
-     background-position-x: center;
-     background-size: 100vh;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
 
-     .soy-maria {
-         display: flex;
-         flex-direction: column;
-         align-content: center;
-         justify-content: center;
-         padding-inline: 5%;
-         border: #a36d02;
-     }
+.pantalla1 {
+  /* nombre, carrera, descripción y foto */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* Rellena toda la pantalla */
+  height: 100vh;
+  /* Imagen de fondo */
+  background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position-x: center;
+  background-size: 100vh;
 
-     .mi-foto {
-         position: relative;
-         width: 150px;
+  .soy-maria {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-inline: 5%;
+    border: #a36d02;
+  }
 
+  .mi-foto {
+    position: relative;
+    width: 150px;
 
-         #yo {
-             display: block;
-             width: 100%;
-             /* background-image: url(C:\0_MasterGIS\19_Intro_HTML5_CSS_JavaScript\Meer_MV\HTML_CSS\CV\Imágenes\Background\marco-hojas-cuadrado.png);
+    #yo {
+      display: block;
+      width: 100%;
+      /* background-image: url(C:\0_MasterGIS\19_Intro_HTML5_CSS_JavaScript\Meer_MV\HTML_CSS\CV\Imágenes\Background\marco-hojas-cuadrado.png);
              background-repeat: no-repeat, no-repeat, no-repeat;
              background-position-x: center;
              background-size: 100vh; */
-             border-image-slice: 67 123 147 52;
-             border-image-width: 20px 20px 20px 20px;
-             border-image-outset: 0px 0px 0px 0px;
-             border-image-repeat: stretch stretch;
-             border-image-source: url(Imágenes/Background/marco-hojas-cuadrado.png);
-             border-style: solid;
+      border-image-slice: 67 123 147 52;
+      border-image-width: 20px 20px 20px 20px;
+      border-image-outset: 0px 0px 0px 0px;
+      border-image-repeat: stretch stretch;
+      border-image-source: url(Imágenes/Background/marco-hojas-cuadrado.png);
+      border-style: solid;
+    }
 
-         }
-
-         /* 
+    /* 
          #yo-marco {
              position: absolute;
              top: 0;
@@ -66,155 +66,234 @@
              pointer-events: none ;
          } */
 
+    /* intento de meter la foto en el marco, un poco fallido, volveremos  */
+  }
+}
 
-         /* intento de meter la foto en el marco, un poco fallido, volveremos  */
+/* Poner el formato de los subtítulos de las partes igual */
+.subtitulo {
+  text-align: center;
+}
 
-     }
- }
+.pantalla2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
 
- /* Poner el formato de los subtítulos de las partes igual */
- .subtitulo {
-     text-align: center;
+  .entre-cajas {
+    height: 75vh;
+  }
 
- }
+  .datos-personales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .subcaja-dp {
+    /* poner el contenido de la caja centrado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border-style: solid;
+      border-color: rgb(195, 142, 142);
+      border-width: 1px; */
+  }
+
+  .cuadrado-d-p {
+    /* que cada cuadrado sea: imagen luego nombre */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* space between me deja el texto muy a la derecha :( */
+    align-items: center;
+
+    width: 100%;
+    gap: 20px;
+    /* espacio entre ellos */
+
+    margin: 30px;
+    /* burbujitas */
+    border-style: solid;
+    border-color: #9e8061;
+    border-width: 3px;
+    border-radius: 7px;
+    background-color: #9e8061;
+
+    .icono-datos-personales {
+    }
+
+    .txt {
+      align-items: start;
+    }
+  }
+}
+
+.pantalla3-herramientas {
+  height: 100vh;
+  width: 100vw;
+
+  .computer-skills {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+    margin-bottom: 20px;
+
+    #txt {
+      font-weight: bold;
+    }
+  }
+
+  .c-s-1,
+  .c-s-2,
+  .office {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .c-s {
+    /* que cada cuadrado sea: imagen luego nombre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: large;
+    font-weight: bold;
+
+    width: 35%;
+    max-width: 200px;
+
+    /* espacio entre ellos */
+    padding-top: 2%;
+    margin: 20px;
+    /* burbujitas */
+    border-style: inset;
+    border-color: #9e8061;
+    border-width: 3px;
+    border-radius: 7px;
+    background-color: #9e8061;
+  }
+
+  .c-s:hover {
+    background-color: #656d4a;
+    border-color: #414833;
+    border-style: solid;
+    border-width: 5px;
+    /* fuera bordes arriba e izquierda, así sombra donde quiero*/
+    border-top: 0px;
+    border-left: 0px;
+    /* animaciones */
+    transform: translateX(-3px) translateY(-3px);
+    /*retardo del movimiento */
+    transition: 0.5s;
+  }
+
+  #M-O {
+    text-align: center;
+  }
+
+  .office {
 
 
- .pantalla2 {
-     height: 100vh;
-     background-color: #8C8051;
-     display: flex;
-     flex-direction: column;
+    /* literal del ejercicio del centro de salud, hay qeu formatearlo un poco */
+    box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
+    /* al final le metemos el box shadow de la pagina web y ahora le metemos borde redondeado */
+    border-radius: 7px;
 
-     .datos-personales {
-         display: flex;
-         flex-direction: column;
+    padding: 30px;
+    margin-bottom: 20px;
 
-         .subcaja-dp {
-             display: flex;
-             flex-direction: row;
-             justify-content: center;
-             align-items: center;
+    .sub-office {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 
-             width: 100vw;
+.pantalla4-experiencia {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
 
-             box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-             -webkit-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-             -moz-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-             /* al final le metemos el box shadow de la pagina web y ahora le metemos borde redondeado */
-             border-radius: 7px;
+  #experiencia,
+  #formacion {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
 
-             padding: 30px;
-             margin-bottom: 20px;
-         }
+    #foto-veolia {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
 
-         .dp {
-             width: 100vw;
+    #foto-su {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
 
-             #telefono {
-                 justify-content: flex-start;
-             }
+    #foto-uam {
+      aspect-ratio: 2 / 1;
+      object-fit: cover;
+    }
+  }
+}
 
-             #mail {}
+.pantalla5 {
+  height: 100vh;
+}
 
-             #linkedin {
-                 justify-content: end;
-                 align-items: end;
-                 text-decoration: none;
-             }
-         }
-     }
+/* -------------------------------------- */
+/*   TABLET (≤1279px y ≥760px)            */
+/* -------------------------------------- */
 
+@media (max-width: 1279px) {
+  .pantalla2 {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    padding: 30px;
+  }
 
- }
+  #titulo2 {
+    grid-column: 1 / 3;
+    /* ocupa 2 columnas */
+    font-size: 2rem;
+  }
 
- .pantalla3-herramientas {
-     height: 100vh;
-     background-color: #8C7051;
+  .bloque {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
 
- }
+/* -------------------------------------- */
+/*   MÓVIL (≤759px)                       */
+/* -------------------------------------- */
 
- .pantalla4-experiencia {
-     display: flex;
-     flex-direction: row;
-     height: 100vh;
-     background-color: #8C6651;
+@media (max-width: 759px) {
+  .pantalla2 {
+    grid-template-columns: 1fr;
+    /* 1 columna */
+    padding: 20px;
+  }
 
-     #experiencia,
-     #formacion {
-         display: flex;
-         flex-direction: column;
-         padding: 5%;
+  #titulo2 {
+    grid-column: 1 / 2;
+    font-size: 1.6rem;
+  }
 
-         #foto-veolia {
-             aspect-ratio: 16 / 9;
-             object-fit: cover;
-         }
-
-         #foto-su {
-             aspect-ratio: 1 / 1;
-             object-fit: cover;
-         }
-
-         #foto-uam {
-             aspect-ratio: 2 / 1;
-             object-fit: cover;
-         }
-
-
-     }
- }
-
-
-
-
- .pantalla5 {
-     height: 100vh;
-     background-color: #8C7051;
-
- }
-
-
- /* -------------------------------------- */
- /*   TABLET (≤1279px y ≥760px)            */
- /* -------------------------------------- */
-
- @media (max-width: 1279px) {
-     .pantalla2 {
-         grid-template-columns: repeat(2, 1fr);
-         /* 2 columnas */
-         padding: 30px;
-     }
-
-     #titulo2 {
-         grid-column: 1 / 3;
-         /* ocupa 2 columnas */
-         font-size: 2rem;
-     }
-
-     .bloque {
-         font-size: 1rem;
-         padding: 20px;
-     }
- }
-
- /* -------------------------------------- */
- /*   MÓVIL (≤759px)                       */
- /* -------------------------------------- */
-
- @media (max-width: 759px) {
-     .pantalla2 {
-         grid-template-columns: 1fr;
-         /* 1 columna */
-         padding: 20px;
-     }
-
-     #titulo2 {
-         grid-column: 1 / 2;
-         font-size: 1.6rem;
-     }
-
-     .bloque {
-         font-size: 0.95rem;
-         padding: 15px;
-     }
- }
+  .bloque {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+}
