@@ -251,6 +251,50 @@ body {
 
 .pantalla5 {
   height: 100vh;
+
+  /* hay que poner primero habilidades */
+
+  /* y luego el carrusel de intereses */
+
+  .interesesCarrusel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .carruselInnet {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px;
+    width: 80%;
+    /* Ajusta el ancho según prefieras */
+    max-width: 800px;
+    /* Evita que sea demasiado ancho en pantallas grandes */
+    border-radius: 10px;
+
+    /* Ocultar barra de scroll en navegadores que lo soporten (opcional) */
+    scrollbar-width: thin;
+    scrollbar-color: #a36d02 transparent;
+
+    img {
+      scroll-snap-align: center;
+      height: 300px;
+      /* Altura fija para uniformidad */
+      width: auto;
+      /* Mantiene proporción */
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      flex-shrink: 0;
+      /* Evita que las imágenes se encojan */
+    }
+  }
+
 }
 
 /* -------------------------------------- */
