@@ -72,16 +72,16 @@ body {
   text-align: center;
 }
 
+.entre-cajas {
+  height: 75vh;
+}
+
 .pantalla2 {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: large;
-
-  .entre-cajas {
-    height: 75vh;
-  }
 
   .datos-personales {
     display: flex;
@@ -104,7 +104,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* space between me deja el texto muy a la derecha :( */
     align-items: center;
 
     width: 100%;
@@ -112,7 +111,6 @@ body {
     /* espacio entre ellos */
 
     margin: 30px;
-    /* burbujitas */
     border-style: solid;
     border-color: #9e8061;
     border-width: 3px;
@@ -141,7 +139,6 @@ body {
   .computer-skills {
     display: flex;
     flex-direction: column;
-
     padding: 10px;
     margin-bottom: 0px;
 
@@ -160,7 +157,7 @@ body {
   }
 
   .c-s {
-    /* que cada cuadrado sea: imagen luego nombre */
+    /* orden en cada cuadrado: imagen luego nombre */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +180,7 @@ body {
     background-color: #9e8061;
   }
 
-  .c-s:not(#Word):not(#Excel):not(#Poweropint):hover {
+  .c-s:not(#Word):not(#Excel):not(#PowerPoint):hover {
     background-color: #656d4a;
     border-color: #414833;
     border-style: solid;
@@ -252,27 +249,80 @@ body {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
 
   #experiencia,
   #formacion {
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 2%;
+    width: 40%;
+    /* espacio entre titulo y cards */
+    gap: 10px;
+  }
 
-    #foto-veolia {
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-    }
+  .s-c {
+    display: flex;
+    flex-direction: column;
+    /* Espacio entre cards */
 
-    #foto-su {
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
+    gap: 20px;
+  }
 
-    #foto-uam {
-      aspect-ratio: 2 / 1;
-      object-fit: cover;
+  .card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    color: #e0c48c;
+    position: relative;
+
+    background-color: #6a584a;
+    border-style: dashed double;
+    border-color: #3d2f25;
+    border-width: 4px;
+    border-radius: 5px;
+  }
+
+  #uamen {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+
+    max-height: 100px;
+    padding: 5px 15px;
+    gap: 0px;
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.2;
     }
+  }
+
+  .uni-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .card img {
+    object-fit: contain;
+    width: 100px;
+    height: auto;
+    /* mantiene la proporción original */
+    max-height: 80px;
+    background-color: transparent;
+    /* fondo transparente */
+    border-radius: 4px;
+  }
+
+  /* Excepción para Veolia: un poco más grande */
+  #foto-veolia {
+    width: 140px;
+    max-height: 100px;
   }
 }
 
@@ -281,10 +331,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centrar contenido verticalmente */
   padding-top: 20px;
 
-  /* Estulos para la lista de habilidades (versión limpia) */
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
