@@ -1,3 +1,7 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   background-color: #8c7051;
   margin: 0;
@@ -9,9 +13,17 @@ body {
   color: #e0c48c;
 
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+}
+
+/* Aplica el snap a todas las pantallas */
+.pantalla1,
+.pantalla2,
+.pantalla3-herramientas,
+.pantalla4-experiencia,
+.pantalla5 {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .pantalla1 {
@@ -24,9 +36,11 @@ body {
   height: 100vh;
   /* Imagen de fondo */
   background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position-x: center;
-  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 140%;
+  /* Forzar a que ocupe todo el ancho y alto */
+  /* Cubrir todo el espacio (hace la imagen más grande) */
 
   .soy-maria {
     display: flex;
@@ -44,29 +58,12 @@ body {
     #yo {
       display: block;
       width: 100%;
-      /* background-image: url(C:\0_MasterGIS\19_Intro_HTML5_CSS_JavaScript\Meer_MV\HTML_CSS\CV\Imágenes\Background\marco-hojas-cuadrado.png);
-             background-repeat: no-repeat, no-repeat, no-repeat;
-             background-position-x: center;
-             background-size: 100vh; */
-      border-image-slice: 67 123 147 52;
-      border-image-width: 20px 20px 20px 20px;
-      border-image-outset: 0px 0px 0px 0px;
-      border-image-repeat: stretch stretch;
-      border-image-source: url(Imágenes/Background/marco-hojas-cuadrado.png);
-      border-style: solid;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+
     }
 
-    /* 
-         #yo-marco {
-             position: absolute;
-             top: 0;
-             left: 0;
-             width: 155px;
-             height: 155px;
-             pointer-events: none ;
-         } */
-
-    /* intento de meter la foto en el marco, un poco fallido, volveremos  */
   }
 }
 
@@ -79,6 +76,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-size: large;
 
   .entre-cajas {
@@ -89,6 +87,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 
   .subcaja-dp {
@@ -98,21 +97,18 @@ body {
     justify-content: center;
     align-items: center;
 
-    /* border-style: solid;
-      border-color: rgb(195, 142, 142);
-      border-width: 1px; */
   }
 
   .cuadrado-d-p {
     /* que cada cuadrado sea: imagen luego nombre */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     /* space between me deja el texto muy a la derecha :( */
     align-items: center;
 
     width: 100%;
-    gap: 20px;
+    gap: 15px;
     /* espacio entre ellos */
 
     margin: 30px;
@@ -123,11 +119,14 @@ body {
     border-radius: 7px;
     background-color: #9e8061;
 
-    .icono-datos-personales {
+    .txt {
+      flex-grow: 1;
+      text-align: left;
     }
 
-    .txt {
-      align-items: start;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
 }
@@ -135,13 +134,16 @@ body {
 .pantalla3-herramientas {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .computer-skills {
     display: flex;
     flex-direction: column;
 
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 0px;
 
     #txt {
       font-weight: bold;
@@ -171,8 +173,8 @@ body {
     max-width: 200px;
 
     /* espacio entre ellos */
-    padding-top: 2%;
-    margin: 20px;
+    padding-top: 10px;
+    margin: 10px;
     /* burbujitas */
     border-style: inset;
     border-color: #9e8061;
@@ -181,7 +183,7 @@ body {
     background-color: #9e8061;
   }
 
-  .c-s:hover {
+  .c-s:not(#Word):not(#Excel):not(#Poweropint):hover {
     background-color: #656d4a;
     border-color: #414833;
     border-style: solid;
@@ -195,30 +197,55 @@ body {
     transition: 0.5s;
   }
 
+  #rama-hs-mo {
+    width: 60%;
+    max-width: 550px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    opacity: 0.9;
+  }
+
   #M-O {
     text-align: center;
   }
 
   .office {
-
-
-    /* literal del ejercicio del centro de salud, hay qeu formatearlo un poco */
-    box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 18px -2px rgba(0, 0, 0, 0.75);
-    /* al final le metemos el box shadow de la pagina web y ahora le metemos borde redondeado */
-    border-radius: 7px;
-
-    padding: 30px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
 
     .sub-office {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px;
     }
+
   }
+
+  #Word:hover {
+    background-color: #2b579a;
+    border-color: #1b3a6a;
+    color: white;
+  }
+
+  #Excel:hover {
+    background-color: #217346;
+    border-color: #164f30;
+    color: white;
+  }
+
+  #Poweropint:hover {
+    background-color: #d24726;
+    border-color: #a0361c;
+    color: white;
+  }
+
 }
 
 .pantalla4-experiencia {
@@ -251,17 +278,47 @@ body {
 
 .pantalla5 {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centrar contenido verticalmente */
+  padding-top: 20px;
 
-  /* hay que poner primero habilidades */
+  /* Estulos para la lista de habilidades (versión limpia) */
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10%;
+    list-style: none;
+    margin-bottom: 30px;
 
-  /* y luego el carrusel de intereses */
+    li {
+      background-color: #9e8061;
+      padding: 10px 20px;
+      border-radius: 20px;
+      /* Estilo píldora */
+      color: #3e2b1d;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #e0c48c;
+      }
+    }
+  }
+
+
 
   .interesesCarrusel {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .carruselInnet {
@@ -272,72 +329,142 @@ body {
     gap: 20px;
     padding-bottom: 20px;
     width: 80%;
-    /* Ajusta el ancho según prefieras */
     max-width: 800px;
-    /* Evita que sea demasiado ancho en pantallas grandes */
     border-radius: 10px;
-
-    /* Ocultar barra de scroll en navegadores que lo soporten (opcional) */
-    scrollbar-width: thin;
-    scrollbar-color: #a36d02 transparent;
 
     img {
       scroll-snap-align: center;
       height: 300px;
-      /* Altura fija para uniformidad */
       width: auto;
-      /* Mantiene proporción */
       border-radius: 10px;
       margin-bottom: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      flex-shrink: 0;
       /* Evita que las imágenes se encojan */
+      flex-shrink: 0;
+
     }
   }
 
 }
 
-/* -------------------------------------- */
-/*   TABLET (≤1279px y ≥760px)            */
-/* -------------------------------------- */
 
 @media (max-width: 1279px) {
-  .pantalla2 {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 columnas */
-    padding: 30px;
+
+
+  .subtitulo {
+    font-size: 1.8rem;
   }
 
-  #titulo2 {
-    grid-column: 1 / 3;
-    /* ocupa 2 columnas */
-    font-size: 2rem;
+  .pantalla2 .datos-personales {
+    flex-wrap: wrap;
   }
 
-  .bloque {
-    font-size: 1rem;
-    padding: 20px;
+  .pantalla4-experiencia {
+    flex-direction: column;
+    height: auto;
+    /* El contenido manda */
+  }
+
+  .pantalla5 .carruselInnet img {
+    height: 250px;
   }
 }
 
-/* -------------------------------------- */
-/*   MÓVIL (≤759px)                       */
-/* -------------------------------------- */
+
 
 @media (max-width: 759px) {
+
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+  }
+
+  .pantalla1 {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+
+    .soy-maria {
+      padding-bottom: 30px;
+    }
+  }
+
   .pantalla2 {
-    grid-template-columns: 1fr;
-    /* 1 columna */
-    padding: 20px;
+    height: auto;
+    padding: 20px 0;
+
+    .datos-personales {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .subcaja-dp {
+      width: 100%;
+    }
+
+    .cuadrado-d-p {
+      flex-direction: (row);
+      justify-content: flex-start;
+      width: 90%;
+      margin: 10px 0;
+    }
   }
 
-  #titulo2 {
-    grid-column: 1 / 2;
-    font-size: 1.6rem;
+
+  .pantalla3-herramientas {
+    height: auto;
+    padding-bottom: 30px;
+
+    .c-s-1,
+    .c-s-2,
+    .sub-office {
+      flex-wrap: wrap;
+    }
   }
 
-  .bloque {
-    font-size: 0.95rem;
-    padding: 15px;
+  .pantalla4-experiencia {
+    flex-direction: column;
+    height: auto;
+
+    #experiencia,
+    #formacion {
+      padding: 5% 5%;
+      width: 90%;
+    }
+  }
+
+
+  .pantalla5 {
+    height: auto;
+    padding-bottom: 50px;
+
+    .skills-grid {
+      padding: 0 5%;
+      gap: 10px;
+
+      li {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+        width: 100%;
+      }
+    }
+
+    .carruselInnet {
+      width: 95%;
+
+      img {
+        height: 200px;
+      }
+
+      figure {
+        margin: 0 5px;
+      }
+    }
   }
 }
