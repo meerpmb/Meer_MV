@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum_MPMB</title>
     <link rel="stylesheet" href="./curriculumSTYLE.css">
+    <script src="./curriculumMAIN.js"></script>
 
     <!-- Links para la fuente del texto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +21,16 @@
         <div class="soy-maria">
             <h1 id="mi-nombre"> María Perdomo Martínez-Berná </h1>
             <h2 id="carrera">Ambientóloga y Analista GIS</h2>
-            <p class="resumen-de-mi">Monja católica y líder humanitaria, fundadora de las Misioneras de la Caridad en 1950.</p>
-                <p class="resumen-de-mi">Con más de 45 años de dedicación incansable, gestionó centros de acogida, hospitales y escuelas para
+            <p class="resumen-de-mi">Monja católica y líder humanitaria, fundadora de las Misioneras de la Caridad en
+                1950.</p>
+            <p class="resumen-de-mi">Con más de 45 años de dedicación incansable, gestionó centros de acogida,
+                hospitales y escuelas para
                 atender a 'los más pobres entre los pobres' en Calcuta y a nivel internacional.</p>
-                <p class="resumen-de-mi">Reconocida con el Premio Nobel de la Paz (1979) por su impacto en la reducción del sufrimiento humano
-                    y la gestión de ayuda
+            <p class="resumen-de-mi">Reconocida con el Premio Nobel de la Paz (1979) por su impacto en la reducción del
+                sufrimiento humano
+                y la gestión de ayuda
                 social desinteresada.</p>
+              <p>Por si hay alguja duda es la descripción de Santa Teresa de Calcuta</p>  
         </div>
 
         <div class="mi-foto">
@@ -413,7 +418,11 @@
                         required></textarea>
                 </div>
 
-                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                <div class="boton-enviar" onclick="location.href='mailto:meerpmb@:gmail.com';">
+                    <button type="submit" id="boton-enviar">Enviar Mensaje</button>
+                </div>
+
+
             </form>
         </footer>
 
