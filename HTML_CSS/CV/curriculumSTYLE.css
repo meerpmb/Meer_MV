@@ -1,22 +1,46 @@
+:root {
+  /* Colores: fondo */
+  --color-primary: #8c7051;
+  /* Cards */
+  --color-secondary: #6a584a;
+  /* Bordes */
+  --color-accent: #a36d02;
+  /*Texto */
+  --color-text: #e0c48c;
+  /* Hover */
+  --color-highlight: #656d4a;
+  /* Borde cards */
+  --color-border: #9e8061;
+  /* Sombra */
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --font-main: "Roboto Slab", serif;
+  --gap-standard: 15px;
+}
+
 html {
   scroll-snap-type: y mandatory;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
-  background-color: #8c7051;
+  background-color: var(--color-primary);
   margin: 0;
   width: 100vw;
   justify-content: center;
-
-  font-family: "Roboto Slab", serif;
+  font-family: var(--font-main);
   font-weight: 400;
-  color: #e0c48c;
-
+  color: var(--color-text);
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
 
-/* Aplica el snap a todas las pantallas */
+/* Snap en todas las pantallas */
 .pantalla1,
 .pantalla2,
 .pantalla3-herramientas,
@@ -24,23 +48,21 @@ body {
 .pantalla5 {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  min-height: 100vh;
+  width: 100%;
 }
 
+/* === PANTALLA 1: PORTADA === */
 .pantalla1 {
-  /* nombre, carrera, descripción y foto */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* Rellena toda la pantalla */
   height: 100vh;
-  /* Imagen de fondo */
   background-image: url(Imágenes/Background/imagen_2026-02-08_092223893-Photoroom.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80% 140%;
-  /* Forzar a que ocupe todo el ancho y alto */
-  /* Cubrir todo el espacio (hace la imagen más grande) */
 
   .soy-maria {
     display: flex;
@@ -48,7 +70,7 @@ body {
     align-content: center;
     justify-content: center;
     padding-inline: 5%;
-    border: #a36d02;
+    border: var(--color-accent);
   }
 
   .mi-foto {
@@ -61,13 +83,10 @@ body {
       border-radius: 50%;
       aspect-ratio: 1/1;
       object-fit: cover;
-
     }
-
   }
 }
 
-/* Poner el formato de los subtítulos de las partes igual */
 .subtitulo {
   text-align: center;
 }
@@ -76,8 +95,8 @@ body {
   height: 75vh;
 }
 
+/* === PANTALLA 2: DATOS PERSONALES === */
 .pantalla2 {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,31 +110,23 @@ body {
   }
 
   .subcaja-dp {
-    /* poner el contenido de la caja centrado */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
   }
 
   .cuadrado-d-p {
-    /* que cada cuadrado sea: imagen luego nombre */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
     width: 100%;
-    gap: 15px;
-    /* espacio entre ellos */
-
+    gap: var(--gap-standard);
     margin: 30px;
-    border-style: solid;
-    border-color: #9e8061;
-    border-width: 3px;
+    border: 3px solid var(--color-border);
     border-radius: 7px;
-    background-color: #9e8061;
+    background-color: var(--color-border);
 
     .txt {
       flex-grow: 1;
@@ -126,129 +137,141 @@ body {
       text-decoration: none;
       color: inherit;
     }
+
+    .icono-datos-personales {
+      object-fit: contain;
+    }
   }
 }
 
+/* === PANTALLA 3: HARD SKILLS === */
 .pantalla3-herramientas {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
 
   .computer-skills {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    margin-bottom: 0px;
-
-    #txt {
-      font-weight: bold;
-    }
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
   }
 
   .c-s-1,
   .c-s-2,
-  .office {
+  .office,
+  .sub-office {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
   }
 
   .c-s {
-    /* orden en cada cuadrado: imagen luego nombre */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 
+    align-items: center;
     font-size: large;
     font-weight: bold;
+    width: 200px;
 
-    width: 35%;
-    max-width: 200px;
-
-    /* espacio entre ellos */
-    padding-top: 10px;
+    padding: 15px;
     margin: 10px;
-    /* burbujitas */
-    border-style: inset;
-    border-color: #9e8061;
-    border-width: 3px;
+    border: 3px inset var(--color-border);
     border-radius: 7px;
-    background-color: #9e8061;
+    background-color: var(--color-border);
+    transition: transform 0.3s, background-color 0.3s;
+
+    min-height: 160px;
   }
 
-  .c-s:not(#Word):not(#Excel):not(#PowerPoint):hover {
-    background-color: #656d4a;
-    border-color: #414833;
-    border-style: solid;
-    border-width: 5px;
-    /* fuera bordes arriba e izquierda, así sombra donde quiero*/
+  /* BARRA DE PROGRESO - ESTILOS NUEVOS */
+  .barra-contenedor {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+
+  .barra-progreso {
+    height: 100%;
+    background-color: #3e2b1d;
+
+    width: 0%;
+
+    border-radius: 5px;
+    animation: cargarBarra 1.5s ease-out forwards;
+  }
+
+  @keyframes cargarBarra {
+    from {
+      width: 0%;
+    }
+  }
+
+  .c-s:hover {
+    background-color: var(--color-highlight);
+    border: 5px solid #414833;
     border-top: 0px;
     border-left: 0px;
-    /* animaciones */
     transform: translateX(-3px) translateY(-3px);
-    /*retardo del movimiento */
-    transition: 0.5s;
   }
 
-  #rama-hs-mo {
-    width: 60%;
-    max-width: 550px;
-    display: block;
-    margin: 0 auto;
-    height: auto;
-    opacity: 0.9;
-  }
-
-  #M-O {
-    text-align: center;
-  }
-
-  .office {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-bottom: 10px;
-
-    .sub-office {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 10px;
-    }
-
-  }
-
+  /* Colores específicos hover Office */
   #Word:hover {
     background-color: #2b579a;
     border-color: #1b3a6a;
     color: white;
+
+    .barra-progreso {
+      background-color: white;
+    }
   }
 
   #Excel:hover {
     background-color: #217346;
     border-color: #164f30;
     color: white;
+
+    .barra-progreso {
+      background-color: white;
+    }
   }
 
   #Poweropint:hover {
     background-color: #d24726;
     border-color: #a0361c;
     color: white;
+
+    .barra-progreso {
+      background-color: white;
+    }
   }
 
+  #rama-hs-mo {
+    width: 60%;
+    max-width: 550px;
+    display: block;
+    margin: 20px auto;
+    opacity: 0.9;
+  }
 }
 
+/* === PANTALLA 4: EXPERIENCIA === */
 .pantalla4-experiencia {
   display: flex;
   flex-direction: row;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 
@@ -258,15 +281,12 @@ body {
     flex-direction: column;
     padding: 2%;
     width: 40%;
-    /* espacio entre titulo y cards */
     gap: 10px;
   }
 
   .s-c {
     display: flex;
     flex-direction: column;
-    /* Espacio entre cards */
-
     gap: 20px;
   }
 
@@ -275,13 +295,10 @@ body {
     align-items: center;
     padding: 15px;
     gap: 10px;
-    color: #e0c48c;
-    position: relative;
-
-    background-color: #6a584a;
-    border-style: dashed double;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    border: 4px dashed double var(--color-border);
     border-color: #3d2f25;
-    border-width: 4px;
     border-radius: 5px;
   }
 
@@ -289,10 +306,9 @@ body {
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-
-    max-height: 100px;
-    padding: 5px 15px;
-    gap: 0px;
+    max-height: none;
+    /* Si l onecesita, puede crecer */
+    padding: 10px 15px;
 
     ul {
       margin: 0;
@@ -312,22 +328,19 @@ body {
     object-fit: contain;
     width: 100px;
     height: auto;
-    /* mantiene la proporción original */
     max-height: 80px;
     background-color: transparent;
-    /* fondo transparente */
     border-radius: 4px;
   }
 
-  /* Excepción para Veolia: un poco más grande */
   #foto-veolia {
     width: 140px;
     max-height: 100px;
   }
 }
 
+/* === PANTALLA 5: HABILIDADES & INTERESES === */
 .pantalla5 {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -343,23 +356,21 @@ body {
     margin-bottom: 30px;
 
     li {
-      background-color: #9e8061;
+      background-color: var(--color-border);
       padding: 10px 20px;
       border-radius: 20px;
-      /* Estilo píldora */
       color: #3e2b1d;
       font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 5px var(--color-shadow);
       transition: transform 0.2s;
+      cursor: default;
 
       &:hover {
         transform: scale(1.1);
-        background-color: #e0c48c;
+        background-color: var(--color-text);
       }
     }
   }
-
-
 
   .interesesCarrusel {
     width: 100%;
@@ -386,19 +397,70 @@ body {
       width: auto;
       border-radius: 10px;
       margin-bottom: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      /* Evita que las imágenes se encojan */
+      box-shadow: 0 4px 6px var(--color-shadow);
       flex-shrink: 0;
-
     }
   }
+}
 
+/* === FORMULARIO DE CONTACTO === */
+footer.pantalla5 {
+  background-color: var(--color-secondary);
+  /* Fondo diferente para footer */
+  justify-content: flex-start;
+  padding: 40px 20px;
+
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    background-color: #eaddcf;
+  }
+
+  .boton-enviar {
+    padding: 10px 30px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--color-highlight);
+    }
+  }
 }
 
 
+/* === MEDIA QUERIES === */
 @media (max-width: 1279px) {
-
-
   .subtitulo {
     font-size: 1.8rem;
   }
@@ -410,7 +472,6 @@ body {
   .pantalla4-experiencia {
     flex-direction: column;
     height: auto;
-    /* El contenido manda */
   }
 
   .pantalla5 .carruselInnet img {
@@ -418,11 +479,7 @@ body {
   }
 }
 
-
-
 @media (max-width: 759px) {
-
-
   body {
     overflow-x: hidden;
   }
@@ -457,13 +514,10 @@ body {
     }
 
     .cuadrado-d-p {
-      flex-direction: (row);
-      justify-content: flex-start;
       width: 90%;
       margin: 10px 0;
     }
   }
-
 
   .pantalla3-herramientas {
     height: auto;
@@ -473,6 +527,11 @@ body {
     .c-s-2,
     .sub-office {
       flex-wrap: wrap;
+    }
+
+    .c-s {
+      width: 100%;
+      max-width: 250px;
     }
   }
 
@@ -487,7 +546,6 @@ body {
     }
   }
 
-
   .pantalla5 {
     height: auto;
     padding-bottom: 50px;
@@ -500,6 +558,7 @@ body {
         font-size: 0.9rem;
         padding: 8px 15px;
         width: 100%;
+        text-align: center;
       }
     }
 
@@ -508,10 +567,6 @@ body {
 
       img {
         height: 200px;
-      }
-
-      figure {
-        margin: 0 5px;
       }
     }
   }
