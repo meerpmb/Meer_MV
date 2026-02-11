@@ -71,6 +71,7 @@ body {
     justify-content: center;
     padding-inline: 5%;
     border: var(--color-accent);
+    width: 800px;
   }
 
   .mi-foto {
