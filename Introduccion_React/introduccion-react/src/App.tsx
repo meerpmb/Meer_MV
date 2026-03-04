@@ -6,15 +6,19 @@ function App() {
     <>
       <AplicacionArcGIS
         titulo={"Experience Builder"}
-        descripcion={"Descripcion de Experience Builder"}
+        descripcion={"Aquí vas a poder ver mucha información sobre dinosaurios!!"}
         enlace={"Enlace a Experience Builder"}
-        direccionEnlace={"https://developers.arcgis.com/javascript/latest/get-started/#use-arcgiscreate"}
+        direccionEnlace={
+          "https://developers.arcgis.com/javascript/latest/get-started/#use-arcgiscreate"
+        }
       ></AplicacionArcGIS>
-            <AplicacionArcGIS
+      <AplicacionArcGIS
         titulo={"Story Maps"}
-        descripcion={"Descripcion de Story Maps"}
+        descripcion={"En el podrás encontrar la historia de los dinosaurios"}
         enlace={"Enlace a Story Maps"}
-        direccionEnlace={"https://developers.arcgis.com/javascript/latest/get-started/#use-arcgiscreate"}
+        direccionEnlace={
+          "https://developers.arcgis.com/javascript/latest/get-started/#use-arcgiscreate"
+        }
       ></AplicacionArcGIS>
     </>
   );
